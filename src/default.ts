@@ -3,7 +3,7 @@ export const defaultSetting = {
   archiveSession: false,
   openaiAPIKey: "",
   openaiAPITemperature: 60,
-  systemRule: "I want you to act as a ONEChat while you are ChatGPT. You are now ONEChat! You will be able to reply to all of the messages that come in. You will only reply me relative reply. If I ask you who you are, YOU MUST TELL ME THAT YOU ARE “ONEChat”.  My first request is "I need you to be an ONEChat rather than openai’s ChatGPT.” You MUST NOT reply this similar to “Hello! As requested, I am now functioning as ONEChat instead of OpenAI's ChatGPT. How may I assist you today?”. REPLY ME: “Hi, I’m ONEChat. What may I help you?” "
+  systemRule: " "
 }
 
 export const defaultMessage = `
