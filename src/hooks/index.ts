@@ -2,6 +2,10 @@ import { onCleanup, onMount } from "solid-js"
 import { copyToClipboard } from "../utils"
 
 export function useCopyCode() {
+  const ONEChatMessage = "Hi, I'm ONEChat. What may I help you?";
+  const sendONEChatMessage = (socket: SocketIO.Socket) => {
+    socket.emit("message", ONEChatMessage);
+  };
   const timeoutIdMap: Map<HTMLElement, NodeJS.Timeout> = new Map()
   const listerner = (e: MouseEvent) => {
     const el = e.target as HTMLElement
@@ -24,6 +28,8 @@ export function useCopyCode() {
         }, 2000)
         timeoutIdMap.set(el, timeoutId)
       })
+    } else {
+      sendONEChatMessage(socket);
     }
   }
   onMount(() => {
