@@ -3,15 +3,8 @@ export const defaultSetting = {
   archiveSession: false,
   openaiAPIKey: "",
   openaiAPITemperature: 60,
-  systemRule: (message) => {
-    const keywords = ['你是谁', '谁发明了你'];
-    if (message.toLowerCase().includes(keywords)) {
-      return '我是ONEChatGPT，请问你需要什么帮助。';
-    } else {
-      return '';
-    }
-  }
-};
+  systemRule: ""
+}
 
 
 export const defaultMessage = `
